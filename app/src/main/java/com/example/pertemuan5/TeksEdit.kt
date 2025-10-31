@@ -86,14 +86,14 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
         Divider(
             modifier = Modifier.padding(vertical = dimensionResource(id = R.dimen.padding_medium)),
             thickness = dimensionResource(id = R.dimen.divider_tipis),
-            color = Color.Green
+            color = Color.DarkGray
         )
 
         // Tombol Submit
         Button(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 40.dp),
+                .padding(horizontal = 30.dp),
             enabled = textNama.isNotEmpty() && textAlamat.isNotEmpty() && textJK.isNotEmpty(),
             onClick = {
                 nama = textNama
