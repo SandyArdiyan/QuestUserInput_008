@@ -113,7 +113,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
         // Card hasil submit
         ElevatedCard(
             elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
-            colors = CardDefaults.cardColors(containerColor = Color.Black),
+            colors = CardDefaults.cardColors(containerColor = Color.Red),
             modifier = Modifier
                 .height(120.dp)
                 .width(300.dp)
