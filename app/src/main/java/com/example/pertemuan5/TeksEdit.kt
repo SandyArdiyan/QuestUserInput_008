@@ -86,7 +86,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
         Divider(
             modifier = Modifier.padding(vertical = dimensionResource(id = R.dimen.padding_medium)),
             thickness = dimensionResource(id = R.dimen.divider_tipis),
-            color = Color.DarkGray
+            color = Color.Green
         )
 
         // Tombol Submit
@@ -113,7 +113,7 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
         // Card hasil submit
         ElevatedCard(
             elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
-            colors = CardDefaults.cardColors(containerColor = Color.Red),
+            colors = CardDefaults.cardColors(containerColor = Color.Black),
             modifier = Modifier
                 .height(120.dp)
                 .width(300.dp)
