@@ -128,4 +128,37 @@ fun RegistrationForm(modifier: Modifier = Modifier) {
             }
             Spacer(modifier = Modifier.height(8.dp))
 
-   
+            OutlinedTextField(
+                value = umur,
+                onValueChange = { umur = it },
+                label = { Text("Umur") },
+                modifier = Modifier.fillMaxWidth(),
+                colors = customTextFieldColors,
+                shape = RoundedCornerShape(8.dp)
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // --- Jenis Kelamin ---
+            Text("Jenis Kelamin:", modifier = Modifier.fillMaxWidth())
+            Row(modifier = Modifier.fillMaxWidth()) {
+                radioOptions.forEach { text ->
+                    Row(
+                        Modifier
+                            .selectable(
+                                selected = (text == selectedJenisKelamin),
+                                onClick = { selectedJenisKelamin = text }
+                            )
+                            .padding(end = 16.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = (text == selectedJenisKelamin),
+                            onClick = null
+                        )
+                        Text(text = text)
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+
+          
