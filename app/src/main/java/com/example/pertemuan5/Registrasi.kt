@@ -241,3 +241,10 @@ fun RegistrationForm(modifier: Modifier = Modifier) {
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun RegistrationFormPreview() {
+    Pertemuan5Theme {
+        RegistrationForm()
+    }
+}
