@@ -185,3 +185,37 @@ fun RegistrationForm(modifier: Modifier = Modifier) {
         }
     }
 
+    if (showDialog) {
+        AlertDialog(
+            onDismissRequest = { showDialog = false },
+            title = { Text(text = "Registrasi Berhasil") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text("Nama: $namaLengkap")
+                    Text("Kota Asal: $kotaAsal")
+                    Text("Tanggal Lahir: $tanggalLahir")
+                    Text("Alamat: RT $rt / RW $rw")
+                    Text("Umur: $umur")
+                    Text("Jenis Kelamin: $selectedJenisKelamin")
+                    Text("Setuju Syarat: ${if (setuju) "Ya" else "Tidak"}")
+                }
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    showDialog = false
+                    // Reset form
+                    namaLengkap = ""
+                    kotaAsal = ""
+                    tanggalLahir = ""
+                    rt = ""
+                    rw = ""
+                    umur = ""
+                    selectedJenisKelamin = radioOptions[0]
+                    setuju = false
+                }) {
+                    Text("OK")
+                }
+            }
+        )
+    }
+
