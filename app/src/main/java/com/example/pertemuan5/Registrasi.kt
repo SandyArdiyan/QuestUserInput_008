@@ -49,3 +49,20 @@ fun RegistrationForm(modifier: Modifier = Modifier) {
         cursorColor = Color(0xFF8BC34A)
     )
 
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(color = Color(0xFFE8F5E9))
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(24.dp)
+                .background(Color.White, shape = RoundedCornerShape(16.dp))
+                .padding(24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+
+            Text("Form Registrasi", fontSize = 24.sp, modifier = Modifier.padding(bottom = 16.dp))
+            Spacer(modifier = Modifier.height(8.dp))
+
