@@ -66,3 +66,14 @@ fun RegistrationForm(modifier: Modifier = Modifier) {
             Text("Form Registrasi", fontSize = 24.sp, modifier = Modifier.padding(bottom = 16.dp))
             Spacer(modifier = Modifier.height(8.dp))
 
+            // --- Nama Lengkap ---
+            OutlinedTextField(
+                value = namaLengkap,
+                onValueChange = { namaLengkap = it },
+                label = { Text("Nama Lengkap") },
+                modifier = Modifier.fillMaxWidth(),
+                colors = customTextFieldColors,
+                shape = RoundedCornerShape(8.dp)
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+
