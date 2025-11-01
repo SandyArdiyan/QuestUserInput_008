@@ -174,3 +174,14 @@ fun RegistrationForm(modifier: Modifier = Modifier) {
             }
             Spacer(modifier = Modifier.height(32.dp))
 
+            Button(
+                onClick = { showDialog = true },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8BC34A)),
+                shape = RoundedCornerShape(24.dp)
+            ) {
+                Text("Submit", color = Color.White)
+            }
+        }
+    }
+
