@@ -52,7 +52,7 @@ fun RegistrationForm(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(color = Color(0xFFE8F5E9))
+            .background(Color(0xFFFFF9C4))
     ) {
         Column(
             modifier = Modifier
