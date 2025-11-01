@@ -7,9 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.pertemuan5.ui.theme.Pertemuan5Theme
 
 class MainActivity : ComponentActivity() {
@@ -19,18 +17,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             Pertemuan5Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    // Panggil FormDataDiri di sini
-                    FormDataDiri(modifier = Modifier.padding(innerPadding))
+
+                    // [INI BAGIAN UTAMA]
+                    // Memanggil RegistrationForm saat aplikasi dibuka
+                    // dan memberinya padding dari Scaffold
+                    RegistrationForm(modifier = Modifier.padding(innerPadding))
+
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun FormDataDiriPreview() {
-    Pertemuan5Theme {
-        FormDataDiri()
     }
 }
