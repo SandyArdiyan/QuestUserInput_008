@@ -86,4 +86,46 @@ fun RegistrationForm(modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(8.dp))
 
-           
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Box(modifier = Modifier.weight(0.5f)) {
+                    OutlinedTextField(
+                        value = tanggalLahir,
+                        onValueChange = {},
+                        label = { Text("Tanggal Lahir") },
+                        modifier = Modifier.fillMaxWidth(),
+                        readOnly = true,
+                        colors = customTextFieldColors,
+                        shape = RoundedCornerShape(8.dp)
+                    )
+                    Box(
+                        modifier = Modifier
+                            .matchParentSize()
+                            .clickable { showDatePicker = true }
+                    )
+                }
+
+                OutlinedTextField(
+                    value = rt,
+                    onValueChange = { rt = it },
+                    label = { Text("RT") },
+                    modifier = Modifier.weight(0.25f),
+                    colors = customTextFieldColors,
+                    shape = RoundedCornerShape(8.dp)
+                )
+
+                OutlinedTextField(
+                    value = rw,
+                    onValueChange = { rw = it },
+                    label = { Text("RW") },
+                    modifier = Modifier.weight(0.25f),
+                    colors = customTextFieldColors,
+                    shape = RoundedCornerShape(8.dp)
+                )
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+
+   
