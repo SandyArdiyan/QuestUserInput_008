@@ -22,3 +22,30 @@ private fun convertMillisToDate(millis: Long): String {
     return formatter.format(Date(millis))
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun RegistrationForm(modifier: Modifier = Modifier) {
+    // --- State ---
+    var showDialog by remember { mutableStateOf(false) }
+    var namaLengkap by remember { mutableStateOf("") }
+    var kotaAsal by remember { mutableStateOf("") }
+    var tanggalLahir by remember { mutableStateOf("") }
+    var rt by remember { mutableStateOf("") }
+    var rw by remember { mutableStateOf("") }
+    var umur by remember { mutableStateOf("") }
+    val radioOptions = listOf("Laki-laki", "Perempuan")
+    var selectedJenisKelamin by remember { mutableStateOf(radioOptions[0]) }
+    var setuju by remember { mutableStateOf(false) }
+
+    val datePickerState = rememberDatePickerState()
+    var showDatePicker by remember { mutableStateOf(false) }
+
+    val customTextFieldColors = TextFieldDefaults.colors(
+        focusedContainerColor = Color.White,
+        unfocusedContainerColor = Color.White,
+        disabledContainerColor = Color.White,
+        focusedIndicatorColor = Color(0xFF8BC34A),
+        unfocusedIndicatorColor = Color(0xFFD3D3D3),
+        cursorColor = Color(0xFF8BC34A)
+    )
+
